@@ -1,8 +1,8 @@
-# TODO List for Navbar and Toolkits Section Updates
+# TODO List for Implementing Demo URL Feature, Fixing Logo Fit, and Adding FAQ Section
 
-- [x] Remove mobile search bar from nav-links in header
-- [x] Add "Toolkits" link to navigation menu
-- [x] Create toolkitsData array with 4 toolkit items in JavaScript
-- [x] Add Toolkits section HTML after Invitations section
-- [x] Add JavaScript functionality to render toolkits cards (similar to invitations)
-- [x] Test the changes to ensure everything works correctly
+## Tasks
+- [x] Add `demoUrl` property to each product in `invitationsData` array
+- [x] Add `demoUrl` property to each product in `toolkitsData` array
+- [x] Modify `demoBtn.onclick` in `openModal` function to use `item.demoUrl`
+- [x] Change `object-fit` for `.about-logo-image img` from `cover` to `contain`
+- [x] Add FAQ section below About section with toggle functionality (+ to - symbol)

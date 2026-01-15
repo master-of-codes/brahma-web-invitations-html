@@ -608,6 +608,7 @@
         }
         
         .modal-total-price {
+            display: none;
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--primary);
@@ -665,7 +666,13 @@
         .about-logo-image:hover {
             transform: scale(1.05) rotate(5deg);
         }
-        
+
+        .about-logo-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
         .about-logo h2 {
             font-size: 2.2rem;
             color: var(--primary);
@@ -682,7 +689,57 @@
             color: var(--gray);
             margin-bottom: 20px;
         }
-        
+
+        /* Features Section */
+        .features-section {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .features-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .features-image {
+            text-align: center;
+        }
+
+        .features-image img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 60px;
+            font-weight: bold;
+            margin: 0 auto 20px;
+            transition: var(--transition);
+            object-fit: contain;
+        }
+
+        .features-image img:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+
+        .features-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .features-content p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
         /* Contact Section */
         .contact-section {
             padding: 80px 0;
@@ -803,6 +860,185 @@
             color: rgba(255, 255, 255, 0.7);
         }
         
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--white);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 25px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--dark);
+            cursor: pointer;
+            background-color: var(--white);
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background-color: var(--light-gray);
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: var(--primary);
+            transition: var(--transition);
+            font-weight: bold;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 25px;
+            background-color: var(--light);
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 20px 25px;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        /* New Features Section Styles */
+        .features-main-section {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .features-header {
+            margin-bottom: 40px;
+        }
+
+        .features-header h2 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .features-header p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        .features-cta {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 60px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .features-cta:hover {
+            background-color: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .features-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .feature-item {
+            background-color: var(--white);
+            border: 1.4px solid var(--dark);
+            border-radius: 5px;
+            padding: 20px;
+            transition: var(--transition);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+        }
+
+        .feature-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .feature-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin: 0;
+        }
+
+        .feature-description {
+            font-size: 1.2rem;
+            color: var(--dark);
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .feature-divider {
+            height: 1px;
+            background-color: var(--dark);
+            margin: 20px 0;
+            opacity: 0.3;
+        }
+
         /* Responsive Design */
         @media (max-width: 992px) {
             .hero-container {
@@ -821,6 +1057,11 @@
             
             .section-title {
                 font-size: 2.2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
             }
         }
         
@@ -873,44 +1114,91 @@
                 gap: 15px;
                 align-items: flex-start;
             }
+
+            .features-header h2 {
+                font-size: 2.2rem;
+            }
+
+            .feature-description {
+                font-size: 1.1rem;
+            }
         }
         
         @media (max-width: 576px) {
             .logo-text {
                 font-size: 1.5rem;
             }
-            
+
             .search-container {
                 width: 150px;
             }
-            
+
             .hero-content h1 {
                 font-size: 2rem;
             }
-            
+
             .hero-content p {
                 font-size: 1rem;
             }
-            
+
             .category-filter {
-                gap: 10px;
+                gap: 5px;
+                flex-wrap: nowrap;
             }
-            
+
             .category-btn {
-                padding: 8px 15px;
-                font-size: 14px;
+                padding: 5px 8px;
+                font-size: 12px;
             }
-            
+
             .products-container {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
             }
-            
+
+            .product-image {
+                height: 100px;
+            }
+
+            .product-content {
+                padding: 10px;
+            }
+
+            .product-title {
+                font-size: 0.65rem;
+            }
+
+            .product-price {
+                font-size: 0.7rem;
+            }
+
+            .view-plans-btn {
+                padding: 4px 8px;
+                font-size: 7px;
+            }
+
+            .view-icon-btn {
+                font-size: 10px;
+            }
+
             .contact-form {
                 padding: 25px;
             }
-            
+
             .section-title {
                 font-size: 1.8rem;
+            }
+
+            .features-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .feature-item {
+                padding: 15px;
+            }
+
+            .feature-description {
+                font-size: 1rem;
             }
         }
     </style>
@@ -921,10 +1209,10 @@
         <div class="container header-container">
             <div class="logo-nav-container">
                 <div class="logo">
-                    <div class="logo-image" data-aos="fade-right" data-aos-delay="100">
+                    <div class="logo-image">
                         <img src="./assets/logo.png" />
                     </div>
-                    <div class="logo-text" data-aos="fade-right" data-aos-delay="200">
+                    <div class="logo-text">
                         Brahma
                     </div>
                 </div>
@@ -932,14 +1220,15 @@
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#invitations">Invitations</a></li>
                     <li><a href="#toolkits">Toolkits</a></li>
-                    <li><a href="#gifts">Gifts</a></li>
+                    <!-- <li><a href="#gifts">Gifts</a></li> -->
                     <li><a href="#about">About</a></li>
-                    <li><a href="#policies">Policies</a></li>
+                    <!-- <li><a href="#features">Features</a></li>
+                    <li><a href="#policies">Policies</a></li> -->
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-            <div class="search-container" data-aos="fade-left" data-aos-delay="300">
-                <input type="text" class="search-bar" id="searchBar" placeholder="Search product titles...">
+            <div class="search-container">
+                <input type="text" class="search-bar" id="searchBar" placeholder="Search...">
                 <button class="search-btn"><i class="fas fa-search"></i></button>
             </div>
             <div class="hamburger" id="hamburger">
@@ -954,22 +1243,22 @@
             <div class="hero-content" data-aos="fade-right" data-aos-delay="100">
                 <h1>Welcome to Brahma Web Invitations</h1>
                 <p>Custom Digital Web Invitations | Classy Designs | Affordable Pricing</p>
-                <a href="#invitations" class="btn hero-btn">Shop Now</a>
+                <a href="#invitations" class="btn hero-btn">Choose a Template</a>
             </div>
             <div class="hero-carousel" data-aos="fade-left" data-aos-delay="200">
                 <div class="carousel-container">
                     <div class="carousel" id="carousel">
                         <div class="carousel-slide">
-                            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Wedding Invitation">
+                            <img src="./assets/Carousel-image1.png" alt="Wedding Invitation">
                         </div>
                         <div class="carousel-slide">
-                            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Birthday Invitation">
+                            <img src="./assets/carousel--image2.png" alt="Birthday Invitation">
                         </div>
                         <div class="carousel-slide">
-                            <img src="https://images.unsplash.com/photo-1532073150508-0c1df022bdd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Baby Shower Invitation">
+                            <img src="./assets/Carousel-image3.png" alt="Baby Shower Invitation">
                         </div>
                         <div class="carousel-slide">
-                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Anniversary Invitation">
+                            <img src="./assets/carousel-image4.png" alt="Anniversary Invitation">
                         </div>
                     </div>
                     <button class="carousel-nav prev" id="carouselPrev">
@@ -1044,11 +1333,67 @@
                 </div>
                 <h2>Brahma Web Invitations</h2>
             </div>
-            <div class="about-content" data-aos="fade-left" data-aos-delay="200">
+            <div class="about-content" data-aos="fade-up" data-aos-delay="200">
                 <h3>Our Story</h3>
                 <p>We are Brahma Web Invitations. We provide our customers with responsive, customizable, smooth scrolling, well-structured, clean, and user-friendly invitation card websites with transitions and animations.</p>
                 <p>We have worked on 15+ templates for birthday celebrations, weddings, receptions, baby showers, corporate events, and private ceremonies. We customize the templates chosen by users according to their event requirements.</p>
                 <p>Our mission is to make your special occasions even more memorable with beautifully designed digital invitations that reflect your unique style and personality.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Frequently Asked Questions</h2>
+            <div class="faq-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-toggle">+</span>
+                        How long does it take to create a custom invitation?
+                    </div>
+                    <div class="faq-answer">
+                        The creation time depends on the complexity of the design and customization. Simple invitations take 3-5 business days, while more complex ones may take 7-10 days. We always communicate timelines clearly during the ordering process.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-toggle">+</span>
+                        Can I see a demo before purchasing?
+                    </div>
+                    <div class="faq-answer">
+                        Yes! Each invitation template has a live demo you can view. Click the "View Demo" button in the plans modal to see how your invitation will look and function.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-toggle">+</span>
+                        What if I need changes after purchase?
+                    </div>
+                    <div class="faq-answer">
+                        We offer revision support for up to 7 days after purchase. Minor changes are included in the price. Feel free to Contact us if you need modifications.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-toggle">+</span>
+                        Do you provide hosting for the invitations?
+                    </div>
+                    <div class="faq-answer">
+                        Yes, all our invitations come with free hosting for 1 year. After that, hosting can be renewed for a small annual fee. We ensure your invitation remains accessible and secure.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-toggle">+</span>
+                        Are the invitations mobile-friendly?
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely! All our invitations are fully responsive and optimized for mobile devices. They look great on phones, tablets, and desktops, ensuring your guests can access them easily from any device.
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1099,13 +1444,14 @@
                 <ul class="footer-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#invitations">Invitations</a></li>
-                    <li><a href="#gifts">Gifts</a></li>
+                    <li><a href="#toolkits">Toolkits</a></li>
                     <li><a href="#about">About Us</a></li>
-                    <li><a href="#policies">Policies</a></li>
+                    <!-- <li><a href="#features">Features</a></li>
+                    <li><a href="#policies">Policies</a></li> -->
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-            <div class="footer-column" data-aos="fade-up" data-aos-delay="300">
+            <!-- <div class="footer-column" data-aos="fade-up" data-aos-delay="300">
                 <h3>Contact Info</h3>
                 <div class="footer-contact">
                     <p><i class="fas fa-map-marker-alt"></i> 123 Design Street, Creative City</p>
@@ -1113,7 +1459,7 @@
                     <p><i class="fas fa-envelope"></i> info@thavindesigns.com</p>
                     <p><i class="fas fa-clock"></i> Mon-Fri: 9AM-6PM</p>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="copyright" data-aos="fade-up" data-aos-delay="400">
             <p>&copy; 2026 Brahma Web Invitations. All rights reserved.</p>
@@ -1150,7 +1496,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             AOS.init({
                 duration: 1000,
-                once: true,
+                once: false,
                 offset: 100
             });
             
@@ -1220,161 +1566,105 @@
             
             // Product Data
             const invitationsData = [
-                { id: 1, title: "Tamilnadu Wedding Theme", category: "wedding", price: 49, image: "./assets/Tamilnadu-wedding.png", description: "Luxurious gold-themed wedding invitation with elegant typography and floral accents.", plans: [
-                    { duration: "Web page model", price: 50 },
-                    { duration: "Web app", price: 90 },
-                    { duration: "Invitation Web App + Image album Web App", price: 160 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 400 }
+                { id: 1, title: "Tamilnadu Wedding Theme", category: "wedding", price: "1400 - ₹1700", image: "./assets/Tamilnadu-wedding.png", description: "Tamil traditional-themed wedding invitation with elegant typography and floral accents.", demoUrl: "https://tamilnadu-wedding-invitation.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: "1400" },
+                    { duration: "Invitation (web app)", price: "1700" },
+                    
                 ] },
-                { id: 2, title: "Fairytale Wedding Theme", category: "wedding", price: 39, image: "./assets/Fairytale-wedding.png", description: "Beautiful floral design with soft colors for a romantic wedding celebration.", plans: [
-                    { duration: "Web page model", price: 40 },
-                    { duration: "Web app", price: 75 },
-                    { duration: "Invitation Web App + Image album Web App", price: 130 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 320 }
+                { id: 2, title: "Fairytale Wedding Theme", category: "wedding", price: "1200 - ₹1500", image: "./assets/Fairytale-wedding.png", description: "Beautiful fairy design with soft colors for a romantic wedding celebration.", demoUrl: "https://fairytail-wedding-invitation.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: 1200 },
+                    { duration: "Invitation (web app)", price: 1500 },
+
                 ] },
-                { id: 3, title: "Royal Wedding Theme", category: "wedding", price: 45, image: "./assets/Royal-wedding.png", description: "Rustic vintage wedding invitation with earthy tones and natural elements.", plans: [
-                    { duration: "Web page model", price: 45 },
-                    { duration: "Web app", price: 85 },
-                    { duration: "Invitation Web App + Image album Web App", price: 150 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 380 }
+                { id: 3, title: "Royal Wedding Theme", category: "wedding", price: "1200 - ₹1500", image: "./assets/Royal-wedding.png", description: "Luxurious wedding invitation with earthy tones and natural elements.", demoUrl: "https://royal-wedding-invitation.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: 1200 },
+                    { duration: "Invitation (web app)", price: 1500 },
+
                 ] },
-                { id: 4, title: "Kerala Wedding Theme", category: "wedding", price: 42, image: "https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80", description: "Clean and modern design with minimal elements for a contemporary wedding.", plans: [
-                    { duration: "Web page model", price: 50 },
-                    { duration: "Web app", price: 90 },
-                    { duration: "Invitation Web App + Image album Web App", price: 160 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 400 }
+                { id: 4, title: "Kerala Wedding Theme", category: "wedding", price: "--", image: "./assets/launching-soon.png", description: "Clean and modern design with minimal elements for a contemporary wedding.", demoUrl: "https://launching-soon-five.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: "--" },
+
                 ] },
-                { id: 5, title: "Kids Birthday Party", category: "birthday", price: 29, image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80", description: "Colorful and fun birthday invitation perfect for a children's party.", plans: [
-                    { duration: "Web page model", price: 50 },
-                    { duration: "Web app", price: 90 },
-                    { duration: "Invitation Web App + Image album Web App", price: 160 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 400 }
+                { id: 5, title: "Kids Birthday Party", category: "birthday", price: "--", image: "./assets/launching-soon.png", description: "Colorful and fun birthday invitation perfect for a children's party.", demoUrl: "https://launching-soon-8raz.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: "--" },
+                    { duration: "Invitation (web app)", price: "--" },
+
                 ] },
-                { id: 6, title: "Elegant 30th Birthday", category: "birthday", price: 35, image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80", description: "Sophisticated design for a milestone birthday celebration.", plans: [
-                    { duration: "Web page model", price: 50 },
-                    { duration: "Web app", price: 90 },
-                    { duration: "Invitation Web App + Image album Web App", price: 160 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 400 }
+                { id: 6, title: "Elegant Birthday", category: "birthday", price: "--", image: "./assets/launching-soon.png", description: "Sophisticated design for a milestone birthday celebration.", demoUrl: "https://launching-soon-five.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: "--" },
+                    { duration: "Invitation (web app)", price: "--" },
                 ] },
-                { id: 7, title: "Baby Shower - Blue Theme", category: "baby-shower", price: 32, image: "https://images.unsplash.com/photo-1532073150508-0c1df022bdd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80", description: "Adorable baby blue themed invitation for a baby shower celebration.", plans: [
-                    { duration: "Web page model", price: 50 },
-                    { duration: "Web app", price: 90 },
-                    { duration: "Invitation Web App + Image album Web App", price: 160 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 400 }
+                { id: 7, title: "Baby Shower - Blue Theme", category: "baby-shower", price: "--", image: "./assets/launching-soon.png", description: "Adorable baby blue themed invitation for a baby shower celebration.", demoUrl: "https://launching-soon-8raz.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: "--" },
+                    { duration: "Invitation (web app)", price: "--" },
                 ] },
-                { id: 8, title: "Baby Shower - Pink Theme", category: "baby-shower", price: 32, image: "https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80", description: "Sweet pink themed invitation perfect for a baby girl shower.", plans: [
-                    { duration: "Web page model", price: 50 },
-                    { duration: "Web app", price: 90 },
-                    { duration: "Invitation Web App + Image album Web App", price: 160 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 400 }
+                { id: 8, title: "Baby Shower - Pink Theme", category: "baby-shower", price: "--", image: "./assets/launching-soon.png", description: "Sweet pink themed invitation perfect for a baby girl shower.", demoUrl: "https://launching-soon-five.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: "--" },
+                    { duration: "Invitation (web app)", price: "--" },
                 ] },
-                { id: 9, title: "25th Anniversary Gold", category: "anniversary", price: 44, image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80", description: "Elegant gold-themed invitation for a 25th wedding anniversary.", plans: [
-                    { duration: "Web page model", price: 50 },
-                    { duration: "Web app", price: 90 },
-                    { duration: "Invitation Web App + Image album Web App", price: 160 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 400 }
+                { id: 9, title: "25th Anniversary Gold", category: "anniversary", price: "--", image: "./assets/launching-soon.png", description: "Elegant gold-themed invitation for a 25th wedding anniversary.", demoUrl: "https://launching-soon-8raz.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: "--" },
+                    { duration: "Invitation (web app)", price: "--" },
                 ] },
-                { id: 10, title: "10th Anniversary Modern", category: "anniversary", price: 38, image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80", description: "Modern design for a 10th wedding anniversary celebration.", plans: [
-                    { duration: "Web page model", price: 50 },
-                    { duration: "Web app", price: 90 },
-                    { duration: "Invitation Web App + Image album Web App", price: 160 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 400 }
+                { id: 10, title: "10th Anniversary Modern", category: "anniversary", price: "--", image: "./assets/launching-soon.png", description: "Modern design for a 10th wedding anniversary celebration.", demoUrl: "https://launching-soon-five.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: "--" },
+                    { duration: "Invitation (web app)", price: "--" },
                 ] },
-                { id: 11, title: "Beach Wedding Theme", category: "wedding", price: 47, image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80", description: "Beautiful beach-themed wedding invitation with oceanic colors.", plans: [
-                    { duration: "Web page model", price: 50 },
-                    { duration: "Web app", price: 90 },
-                    { duration: "Invitation Web App + Image album Web App", price: 160 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 400 }
+                { id: 11, title: "Beach Wedding Theme", category: "wedding", price: "--", image: "./assets/launching-soon.png", description: "Beautiful beach-themed wedding invitation with oceanic colors.", demoUrl: "https://launching-soon-8raz.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: "--" },
+                    { duration: "Invitation (web app)", price: "--" },
                 ] },
-                { id: 12, title: "Princess Birthday Party", category: "birthday", price: 31, image: "https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80", description: "Magical princess-themed birthday invitation for little girls.", plans: [
-                    { duration: "Web page model", price: 50 },
-                    { duration: "Web app", price: 90 },
-                    { duration: "Invitation Web App + Image album Web App", price: 160 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 400 }
+                { id: 12, title: "Princess Birthday Party", category: "birthday", price: "--", image: "./assets/launching-soon.png", description: "Magical princess-themed birthday invitation for little girls.", demoUrl: "https://launching-soon-five.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: "--" },
+                    { duration: "Invitation (web app)", price: "--" },
                 ] },
-                { id: 13, title: "Gender Reveal Party", category: "baby-shower", price: 36, image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80", description: "Exciting gender reveal invitation with surprise element.", plans: [
-                    { duration: "Web page model", price: 50 },
-                    { duration: "Web app", price: 90 },
-                    { duration: "Invitation Web App + Image album Web App", price: 160 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 400 }
+                { id: 13, title: "Gender Reveal Party", category: "baby-shower", price: "--", image: "./assets/launching-soon.png", description: "Exciting gender reveal invitation with surprise element.", demoUrl: "https://launching-soon-8raz.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: "--" },
+                    { duration: "Invitation (web app)", price: "--" },
                 ] },
-                { id: 14, title: "50th Golden Anniversary", category: "anniversary", price: 52, image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80", description: "Luxurious golden invitation for a 50th wedding anniversary.", plans: [
-                    { duration: "Web page model", price: 50 },
-                    { duration: "Web app", price: 90 },
-                    { duration: "Invitation Web App + Image album Web App", price: 160 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 400 }
+                { id: 14, title: "50th Golden Anniversary", category: "anniversary", price: "--", image: "./assets/launching-soon.png", description: "Luxurious golden invitation for a 50th wedding anniversary.", demoUrl: "https://launching-soon-five.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: "--" },
+                    { duration: "Invitation (web app)", price: "--" },
                 ] },
-                { id: 15, title: "Superhero Birthday Party", category: "birthday", price: 30, image: "https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80", description: "Action-packed superhero birthday invitation for kids.", plans: [
-                    { duration: "Web page model", price: 50 },
-                    { duration: "Web app", price: 90 },
-                    { duration: "Invitation Web App + Image album Web App", price: 160 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 400 }
+                { id: 15, title: "Superhero Birthday Party", category: "birthday", price: "--", image: "./assets/launching-soon.png", description: "Action-packed superhero birthday invitation for kids.", demoUrl: "https://launching-soon-8raz.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: "--" },
+                    { duration: "Invitation (web app)", price: "--" },
                 ] },
-                { id: 16, title: "Garden Wedding Theme", category: "wedding", price: 43, image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80", description: "Beautiful garden-themed wedding invitation with floral elements.", plans: [
-                    { duration: "Web page model", price: 50 },
-                    { duration: "Web app", price: 90 },
-                    { duration: "Invitation Web App + Image album Web App", price: 160 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 400 }
+                { id: 16, title: "Garden Wedding Theme", category: "wedding", price: "--", image: "./assets/launching-soon.png", description: "Beautiful garden-themed wedding invitation with floral elements.", demoUrl: "https://launching-soon-five.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: "--" },
+                    { duration: "Invitation (web app)", price: "--" },
                 ] }
             ];
 
+
+
+
+
+
+
+
+
             // Toolkits Data
             const toolkitsData = [
-                { id: 1, title: "Wedding Planning Toolkit", category: "wedding", price: 59, image: "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80", description: "Complete toolkit for planning your dream wedding with checklists, timelines, and vendor guides.", plans: [
-                    { duration: "Web page model", price: 50 },
-                    { duration: "Web app", price: 90 },
-                    { duration: "Invitation Web App + Image album Web App", price: 160 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 400 }
+                { id: 1, title: "3D slider for Wedding", category: "wedding", price: "--", image: "./assets/launching-soon.png", description: "Complete toolkit for planning your dream wedding with checklists, timelines, and vendor guides.", demoUrl: "https://launching-soon-8raz.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: 50 },
+                    { duration: "Invitation (web app)", price: 90 },
                 ] },
-                { id: 2, title: "Birthday Party Toolkit", category: "birthday", price: 39, image: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80", description: "Everything you need to plan the perfect birthday party with themes, games, and decoration ideas.", plans: [
-                    { duration: "Web page model", price: 40 },
-                    { duration: "Web app", price: 75 },
-                    { duration: "Invitation Web App + Image album Web App", price: 130 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 320 }
+                { id: 2, title: "Birthday Party Toolkit", category: "birthday", price: "--", image: "./assets/launching-soon.png", description: "Everything you need to plan the perfect birthday party with themes, games, and decoration ideas.", demoUrl: "https://launching-soon-five.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: 40 },
+                    { duration: "Invitation (web app)", price: 75 },
                 ] },
-                { id: 3, title: "Baby Shower Toolkit", category: "baby-shower", price: 45, image: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80", description: "Comprehensive toolkit for organizing a memorable baby shower with games, favors, and planning tips.", plans: [
-                    { duration: "Web page model", price: 45 },
-                    { duration: "Web app", price: 85 },
-                    { duration: "Invitation Web App + Image album Web App", price: 150 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 380 }
+                { id: 3, title: "Baby Shower Toolkit", category: "baby-shower", price: "--", image: "./assets/launching-soon.png", description: "Comprehensive toolkit for organizing a memorable baby shower with games, favors, and planning tips.", demoUrl: "https://launching-soon-8raz.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: 45 },
+                    { duration: "Invitation (web app)", price: 85 },
                 ] },
-                { id: 4, title: "Anniversary Celebration Toolkit", category: "anniversary", price: 49, image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80", description: "Special toolkit for celebrating milestones with romantic ideas, gift suggestions, and activity plans.", plans: [
-                    { duration: "Web page model", price: 50 },
-                    { duration: "Web app", price: 90 },
-                    { duration: "Invitation Web App + Image album Web App", price: 160 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 400 }
+                { id: 4, title: "Anniversary Celebration Toolkit", category: "anniversary", price: "--", image: "./assets/launching-soon.png", description: "Special toolkit for celebrating milestones with romantic ideas, gift suggestions, and activity plans.", demoUrl: "https://launching-soon-five.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: 50 },
+                    { duration: "Invitation (web app)", price: 90 },
                 ] }
             ];
             
-            // Plans data for each product
-            const plansData = {
-                1: [
-                    { duration: "Web page model", price: 50 },
-                    { duration: "Web app", price: 90 },
-                    { duration: "Invitation Web App + Image album Web App", price: 160 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 400 }
-                ],
-                2: [
-                    { duration: "Web page model", price: 40 },
-                    { duration: "Web app", price: 75 },
-                    { duration: "Invitation Web App + Image album Web App", price: 130 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 320 }
-                ],
-                3: [
-                    { duration: "Web page model", price: 45 },
-                    { duration: "Web app", price: 85 },
-                    { duration: "Invitation Web App + Image album Web App", price: 150 },
-                    { duration: "Invitation Web App + Matrix album Web App", price: 380 }
-                ]
-            };
-            
-            // Default plans if product doesn't have specific plans
-            const defaultPlans = [
-                { duration: "Web page model", price: 50 },
-                { duration: "Web app", price: 90 },
-                { duration: "Invitation Web App + Image album Web App", price: 160 },
-                { duration: "Invitation Web App + Matrix album Web App", price: 400 }
-            ];
+
             
             // Render product cards
             const productsContainer = document.getElementById('productsContainer');
@@ -1450,8 +1740,10 @@
                 document.querySelectorAll('.view-icon-btn').forEach(button => {
                     button.addEventListener('click', function() {
                         const productId = parseInt(this.getAttribute('data-id'));
-                        // Navigate to third-party website (simulated)
-                        window.open('https://example.com/product/' + productId, '_blank');
+                        const product = invitationsData.find(p => p.id === productId);
+                        if (product) {
+                            window.open(product.demoUrl, '_blank');
+                        }
                     });
                 });
             }
@@ -1496,7 +1788,7 @@
                 const item = data.find(p => p.id === id);
 
                 // Get plans for this item
-                const plans = item.plans || defaultPlans;
+                const plans = item.plans;
 
                 // Update modal title
                 document.getElementById('modalTitle').textContent = `${type.charAt(0).toUpperCase() + type.slice(1)} Plans`;
@@ -1531,7 +1823,7 @@
 
                 // Update demo button to navigate to item page
                 demoBtn.onclick = function() {
-                    window.open(`https://example.com/${type}/` + id, '_blank');
+                    window.open(item.demoUrl, '_blank');
                 };
 
                 // Show modal
@@ -1646,8 +1938,10 @@
                 document.querySelectorAll('#toolkits .view-icon-btn').forEach(button => {
                     button.addEventListener('click', function() {
                         const toolkitId = parseInt(this.getAttribute('data-id'));
-                        // Navigate to third-party website (simulated)
-                        window.open('https://example.com/toolkit/' + toolkitId, '_blank');
+                        const toolkit = toolkitsData.find(t => t.id === toolkitId);
+                        if (toolkit) {
+                            window.open(toolkit.demoUrl, '_blank');
+                        }
                     });
                 });
             }
@@ -1689,10 +1983,10 @@
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
-                    
+
                     const targetId = this.getAttribute('href');
                     if (targetId === '#') return;
-                    
+
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
                         window.scrollTo({
@@ -1702,6 +1996,97 @@
                     }
                 });
             });
+
+            // FAQ Toggle Functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.parentElement;
+                    const faqAnswer = this.nextElementSibling;
+                    const faqToggle = this.querySelector('.faq-toggle');
+
+                    // Toggle active class
+                    faqItem.classList.toggle('active');
+
+                    // Update toggle symbol
+                    if (faqItem.classList.contains('active')) {
+                        faqToggle.innerHTML = '&minus;';
+                    } else {
+                        faqToggle.textContent = '+';
+                    }
+                });
+            });
+
+            // Sticky Features Functionality
+            const featuresList = document.querySelector('.features-list');
+            const featureItems = document.querySelectorAll('.feature-item');
+
+            let lastScrollY = window.scrollY;
+            let stickyItems = [];
+
+            function updateStickyFeatures() {
+                const scrollY = window.scrollY;
+                const viewportHeight = window.innerHeight;
+                const stickyThreshold = viewportHeight * 0.3; // 30% of viewport height
+                const featuresListRect = featuresList.getBoundingClientRect();
+
+                // If the entire features list is out of view (bottom of list above viewport), reset all
+                if (featuresListRect.bottom < 0) {
+                    featureItems.forEach(item => {
+                        item.style.position = '';
+                        item.style.top = '';
+                        item.style.left = '';
+                        item.style.zIndex = '';
+                        item.style.width = '';
+                        item.style.transform = '';
+                    });
+                    stickyItems = [];
+                    return;
+                }
+
+                featureItems.forEach((item, index) => {
+                    const itemRect = item.getBoundingClientRect();
+
+                    // Stick if top reaches 30% threshold, not already sticky, and still within list
+                    if (itemRect.top <= stickyThreshold && !stickyItems.includes(index) && itemRect.bottom > featuresListRect.top) {
+                        stickyItems.push(index);
+                        item.style.position = 'fixed';
+                        item.style.top = '30vh';
+                        item.style.left = itemRect.left + 'px';
+                        item.style.zIndex = 100 + index;
+                        item.style.width = itemRect.width + 'px';
+                        item.style.transform = 'translateY(0)';
+                    }
+
+                    // Unstick if top goes below threshold + margin
+                    if (itemRect.top > stickyThreshold + 50 && stickyItems.includes(index)) {
+                        stickyItems = stickyItems.filter(i => i !== index);
+                        item.style.position = '';
+                        item.style.top = '';
+                        item.style.left = '';
+                        item.style.zIndex = '';
+                        item.style.width = '';
+                        item.style.transform = '';
+                    }
+                });
+
+                lastScrollY = scrollY;
+            }
+
+            // Throttle scroll events for performance
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                if (!scrollTimeout) {
+                    scrollTimeout = setTimeout(function() {
+                        updateStickyFeatures();
+                        scrollTimeout = null;
+                    }, 16); // ~60fps
+                }
+            });
+
+            // Initial check
+            updateStickyFeatures();
         });
     </script>
 </body>
