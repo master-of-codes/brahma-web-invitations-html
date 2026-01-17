@@ -375,6 +375,7 @@
             box-shadow: var(--shadow);
             transition: var(--transition);
             position: relative;
+            min-height: 400px;
         }
         
         .product-card:hover {
@@ -383,7 +384,7 @@
         }
         
         .product-image {
-            height: 200px;
+            height: 250px;
             width: 100%;
             overflow: hidden;
         }
@@ -688,6 +689,51 @@
             font-size: 1.1rem;
             color: var(--gray);
             margin-bottom: 20px;
+        }
+
+        .about-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .about-table th, .about-table td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .about-table th:first-child, .about-table td:first-child {
+            font-weight: bold;
+        }
+
+        .about-table tr {
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .about-table tr:last-child {
+            border-bottom: none;
+        }
+
+        @media (max-width: 768px) {
+            .about-table th, .about-table td {
+                padding: 8px;
+                font-size: 0.9rem;
+            }
+
+            .about-table th:first-child, .about-table td:first-child {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .about-table th, .about-table td {
+                padding: 6px;
+                font-size: 0.8rem;
+            }
+
+            .about-table th:first-child, .about-table td:first-child {
+                font-size: 0.85rem;
+            }
         }
 
         /* Features Section */
@@ -1151,31 +1197,42 @@
                 font-size: 12px;
             }
 
-            .products-container {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-            }
+    .products-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
 
-            .product-image {
-                height: 100px;
-            }
+    .product-card {
+        height: auto;
+        min-height: 300px;
+    }
+
+    .product-image {
+        height: 200px;
+    }
 
             .product-content {
-                padding: 10px;
+                padding: 5px;
             }
 
             .product-title {
                 font-size: 0.65rem;
+                margin-bottom: 5px;
             }
 
-            .product-price {
-                font-size: 0.7rem;
-            }
+    .product-price {
+        font-size: 0.7rem;
+        margin-bottom: 5px;
+    }
 
-            .view-plans-btn {
-                padding: 4px 8px;
-                font-size: 7px;
-            }
+    .product-actions {
+        margin-bottom: 0;
+    }
+
+    .view-plans-btn {
+        padding: 4px 8px;
+        font-size: 7px;
+    }
 
             .view-icon-btn {
                 font-size: 10px;
@@ -1342,8 +1399,53 @@
         </div>
     </section>
 
+    <!-- Comparison Table Section -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Comparison Table</h2>
+            <div class="comparison-content" data-aos="fade-up" data-aos-delay="200">
+                <table class="about-table">
+                    <thead>
+                        <tr>
+                            <th>Aspect</th>
+                            <th>Printed Cards</th>
+                            <th>Invitation Videos</th>
+                            <th>Web Invitations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Expense</td>
+                            <td>Costly</td>
+                            <td>Medium</td>
+                            <td>Budget-friendly</td>
+                        </tr>
+                        <tr>
+                            <td>Flexibility</td>
+                            <td>Minimal</td>
+                            <td>Complicated</td>
+                            <td>Highly Flexible</td>
+                        </tr>
+                        <tr>
+                            <td>Engagement Level</td>
+                            <td>Fixed Content</td>
+                            <td>One-Way Viewing</td>
+                            <td>Interactive Experience</td>
+                        </tr>
+                        <tr>
+                            <td>Content Editability</td>
+                            <td>Cannot Be Changed</td>
+                            <td>Hard to Modify</td>
+                            <td>Real-time Updates</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
     <!-- Features Section -->
-    
+
     <!-- FAQ Section -->
     <section class="faq-section" id="faq">
         <div class="container">
@@ -1352,10 +1454,10 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         <span class="faq-toggle">+</span>
-                        How long does it take to create a custom invitation?
+                        Are the invitations mobile-friendly?
                     </div>
                     <div class="faq-answer">
-                        The creation time depends on the complexity of the design and customization. Simple invitations take 3-5 business days, while more complex ones may take 7-10 days. We always communicate timelines clearly during the ordering process.
+                        Absolutely! All our invitations are fully responsive and optimized for mobile devices. They look great on phones, tablets, and desktops, ensuring your guests can access them easily from any device.
                     </div>
                 </div>
                 <div class="faq-item">
@@ -1364,7 +1466,7 @@
                         Can I see a demo before purchasing?
                     </div>
                     <div class="faq-answer">
-                        Yes! Each invitation template has a live demo you can view. Click the "View Demo" button in the plans modal to see how your invitation will look and function.
+                        Yes! Each invitation template has a live demo you can view. Click the "View Demo" button in the plans modal (or) click the Preview icon in the cards to see how your invitation will look and function.
                     </div>
                 </div>
                 <div class="faq-item">
@@ -1379,19 +1481,68 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         <span class="faq-toggle">+</span>
-                        Do you provide hosting for the invitations?
+                        Can I install this invitation?
                     </div>
                     <div class="faq-answer">
-                        Yes, all our invitations come with free hosting for 1 year. After that, hosting can be renewed for a small annual fee. We ensure your invitation remains accessible and secure.
+                        Yes! You can install your invitation just like other apps and keep it permanently on your home screen.
+Anyone you share the invitation link with can also install it and access it easily.
+However, it is not actually an Android app. <br/> Note: Installation Feature is only for the (Web Application) plan. 
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
                         <span class="faq-toggle">+</span>
-                        Are the invitations mobile-friendly?
+                        What kind of web apps do you provide?
                     </div>
                     <div class="faq-answer">
-                        Absolutely! All our invitations are fully responsive and optimized for mobile devices. They look great on phones, tablets, and desktops, ensuring your guests can access them easily from any device.
+                        We provide invitations as Progressive Web Apps (PWA). A PWA is a web application that behaves like a mobile app but runs in a browser.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-toggle">+</span>
+                        What if I need changes after purchase?
+                    </div>
+                    <div class="faq-answer">
+                        We offer revision support for up to 7 days after purchase. Minor changes are included in the price. Feel free to Contact us if you need modifications.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-toggle">+</span>
+                        What happens if changes are made after publishing?
+                    </div>
+                    <div class="faq-answer">
+                        Even if you have already shared the link, any updates we make will be automatically reflected for all users.
+So, there’s no need to worry about updates after sharing.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-toggle">+</span>
+                        How can I share this with everyone?
+                    </div>
+                    <div class="faq-answer">
+                        Once we complete your invitation, we will send the invitation link to your email.
+You can share it with anyone through any app, and it can be viewed in any browser.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-toggle">+</span>
+                        Can I add music?
+                    </div>
+                    <div class="faq-answer">
+                        Yes! You can add an MP3 music track to your invitation, and you can play or pause it anytime.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-toggle">+</span>
+                        How long does it take for me to receive the invitation?
+                    </div>
+                    <div class="faq-answer">
+                        The Production time depends on the complexity of the design and customization. Simple modifications take maximum of 24 hours, while more complex ones may take 2 days. We always communicate timelines clearly during the ordering process.
                     </div>
                 </div>
             </div>
@@ -1566,19 +1717,19 @@
             
             // Product Data
             const invitationsData = [
-                { id: 1, title: "Tamilnadu Wedding Theme", category: "wedding", price: "1400 - ₹1700", image: "./assets/Tamilnadu-wedding.png", description: "Tamil traditional-themed wedding invitation with elegant typography and floral accents.", demoUrl: "https://tamilnadu-wedding-invitation.vercel.app/", plans: [
-                    { duration: "Invitation (web page model)", price: "1400" },
-                    { duration: "Invitation (web app)", price: "1700" },
-                    
-                ] },
-                { id: 2, title: "Fairytale Wedding Theme", category: "wedding", price: "1200 - ₹1500", image: "./assets/Fairytale-wedding.png", description: "Beautiful fairy design with soft colors for a romantic wedding celebration.", demoUrl: "https://fairytail-wedding-invitation.vercel.app/", plans: [
-                    { duration: "Invitation (web page model)", price: 1200 },
-                    { duration: "Invitation (web app)", price: 1500 },
+                { id: 1, title: "Tamilnadu Wedding Theme", category: "wedding", price: "1500 - ₹1800", image: "./assets/Tamilnadu-wedding.png", description: "Tamil traditional-themed wedding invitation with elegant typography and floral accents.", demoUrl: "https://tamilnadu-wedding-invitation.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: "1500" },
+                    { duration: "Invitation (web app)", price: "1800" },
 
                 ] },
-                { id: 3, title: "Royal Wedding Theme", category: "wedding", price: "1200 - ₹1500", image: "./assets/Royal-wedding.png", description: "Luxurious wedding invitation with earthy tones and natural elements.", demoUrl: "https://royal-wedding-invitation.vercel.app/", plans: [
-                    { duration: "Invitation (web page model)", price: 1200 },
-                    { duration: "Invitation (web app)", price: 1500 },
+                { id: 2, title: "Fairytale Wedding Theme", category: "wedding", price: "1300 - ₹1600", image: "./assets/Fairytale-wedding.png", description: "Beautiful fairy design with soft colors for a romantic wedding celebration.", demoUrl: "https://fairytail-wedding-invitation.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: 1300 },
+                    { duration: "Invitation (web app)", price: 1600 },
+
+                ] },
+                { id: 3, title: "Royal Wedding Theme", category: "wedding", price: "1300 - ₹1600", image: "./assets/Royal-wedding.png", description: "Luxurious wedding invitation with earthy tones and natural elements.", demoUrl: "https://royal-wedding-invitation.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: 1300 },
+                    { duration: "Invitation (web app)", price: 1600 },
 
                 ] },
                 { id: 4, title: "Kerala Wedding Theme", category: "wedding", price: "--", image: "./assets/launching-soon.png", description: "Clean and modern design with minimal elements for a contemporary wedding.", demoUrl: "https://launching-soon-five.vercel.app/", plans: [
@@ -1646,21 +1797,21 @@
 
             // Toolkits Data
             const toolkitsData = [
-                { id: 1, title: "3D slider for Wedding", category: "wedding", price: "--", image: "./assets/launching-soon.png", description: "Complete toolkit for planning your dream wedding with checklists, timelines, and vendor guides.", demoUrl: "https://launching-soon-8raz.vercel.app/", plans: [
-                    { duration: "Invitation (web page model)", price: 50 },
-                    { duration: "Invitation (web app)", price: 90 },
+                { id: 1, title: "3D slider for Wedding", category: "wedding", price: "--", image: "./assets/3D slider.gif", description: "Complete toolkit for planning your dream wedding with checklists, timelines, and vendor guides.", demoUrl: "https://3-d-image-slider-opal.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: "--" },
+                    { duration: "Invitation (web app)", price: "--" },
                 ] },
-                { id: 2, title: "Birthday Party Toolkit", category: "birthday", price: "--", image: "./assets/launching-soon.png", description: "Everything you need to plan the perfect birthday party with themes, games, and decoration ideas.", demoUrl: "https://launching-soon-five.vercel.app/", plans: [
-                    { duration: "Invitation (web page model)", price: 40 },
-                    { duration: "Invitation (web app)", price: 75 },
+                { id: 2, title: "Portrait Album Book App", category: "birthday", price: "--", image: "./assets/launching-soon.png", description: "Everything you need to plan the perfect birthday party with themes, games, and decoration ideas.", demoUrl: "https://launching-soon-five.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: "--" },
+                    { duration: "Invitation (web app)", price: "--" },
                 ] },
-                { id: 3, title: "Baby Shower Toolkit", category: "baby-shower", price: "--", image: "./assets/launching-soon.png", description: "Comprehensive toolkit for organizing a memorable baby shower with games, favors, and planning tips.", demoUrl: "https://launching-soon-8raz.vercel.app/", plans: [
-                    { duration: "Invitation (web page model)", price: 45 },
-                    { duration: "Invitation (web app)", price: 85 },
+                { id: 3, title: "Landscape Album Book Toolkit", category: "baby-shower", price: "--", image: "./assets/launching-soon.png", description: "Comprehensive toolkit for organizing a memorable baby shower with games, favors, and planning tips.", demoUrl: "https://launching-soon-8raz.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: "--" },
+                    { duration: "Invitation (web app)", price: "--" },
                 ] },
                 { id: 4, title: "Anniversary Celebration Toolkit", category: "anniversary", price: "--", image: "./assets/launching-soon.png", description: "Special toolkit for celebrating milestones with romantic ideas, gift suggestions, and activity plans.", demoUrl: "https://launching-soon-five.vercel.app/", plans: [
-                    { duration: "Invitation (web page model)", price: 50 },
-                    { duration: "Invitation (web app)", price: 90 },
+                    { duration: "Invitation (web page model)", price: "--" },
+                    { duration: "Invitation (web app)", price: "--" },
                 ] }
             ];
             

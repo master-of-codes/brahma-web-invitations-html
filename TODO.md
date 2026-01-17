@@ -1,8 +1,3 @@
-# TODO List for Implementing Demo URL Feature, Fixing Logo Fit, and Adding FAQ Section
+# TODO List for Reducing Card Height in Mobile View
 
-## Tasks
-- [x] Add `demoUrl` property to each product in `invitationsData` array
-- [x] Add `demoUrl` property to each product in `toolkitsData` array
-- [x] Modify `demoBtn.onclick` in `openModal` function to use `item.demoUrl`
-- [x] Change `object-fit` for `.about-logo-image img` from `cover` to `contain`
-- [x] Add FAQ section below About section with toggle functionality (+ to - symbol)
+- [x] Edit the CSS in index.html to add min-height: 300px to .product-card in the @media (max-width: 576px) media query
