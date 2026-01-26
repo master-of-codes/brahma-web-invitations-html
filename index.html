@@ -607,6 +607,12 @@
             justify-content: space-between;
             align-items: center;
         }
+
+        .modal-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
         
         .modal-total-price {
             display: none;
@@ -1197,19 +1203,19 @@
                 font-size: 10px;
             }
 
-    .products-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
+            .products-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
 
-    .product-card {
-        height: auto;
-        min-height: 300px;
-    }
+            .product-card {
+                height: auto;
+                min-height: 300px;
+            }
 
-    .product-image {
-        height: 200px;
-    }
+            .product-image {
+                height: 200px;
+            }
 
             .product-content {
                 padding: 5px;
@@ -1397,7 +1403,7 @@
             <div class="about-content" data-aos="fade-up" data-aos-delay="200">
                 <h3>Our Story</h3>
                 <p>We are Brahma Web Invitations. We provide our customers with responsive, customizable, smooth scrolling, well-structured, clean, and user-friendly invitation card websites with transitions and animations.</p>
-                <p>We have worked on 15+ templates for birthday celebrations, weddings, receptions, baby showers, corporate events, and private ceremonies. We customize the templates chosen by users according to their event requirements.</p>
+                <p>We have worked on 15+ templates for birthday celebrations, weddings, receptions, baby showers, corporate events, and private ceremonies. Some of they are launching very Soon. We customize the templates chosen by users according to their event requirements.</p>
                 <p>Our mission is to make your special occasions even more memorable with beautifully designed digital invitations that reflect your unique style and personality.</p>
             </div>
         </div>
@@ -1589,7 +1595,7 @@ You can share it with anyone through any app, and it can be viewed in any browse
                 <p>Creating beautiful digital invitations for your special moments since 2015. We specialize in custom designs that make your events unforgettable.</p>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/brahma_web_invitations?igsh=MTE1cmVsMDcwNmpvdQ=="><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-pinterest"></i></a>
                 </div>
@@ -1638,7 +1644,13 @@ You can share it with anyone through any app, and it can be viewed in any browse
             </div>
             <div class="modal-footer">
                 <div class="modal-total-price" id="modalTotalPrice">₹50</div>
-                <button class="demo-btn" id="demoBtn">View Demo</button>
+                <div class="modal-right">
+                    <button class="demo-btn" id="demoBtn">View Demo</button>
+                    <a href="https://www.instagram.com/brahma_web_invitations?igsh=MTE1cmVsMDcwNmpvdQ==" target="_blank">
+                        <!-- <i class="fab fa-instagram"></i> -->
+                         <button class="demo-btn"><i class="fab fa-instagram"></i> DM to order </button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -1721,20 +1733,24 @@ You can share it with anyone through any app, and it can be viewed in any browse
             
             // Product Data
             const invitationsData = [
-                { id: 1, title: "Tamilnadu Wedding Theme", category: "wedding", price: "1500 - ₹1800", image: "./assets/Tamilnadu-wedding.png", description: "Tamil traditional-themed wedding invitation with elegant typography and floral accents.", demoUrl: "https://tamilnadu-wedding-invitation.vercel.app/", plans: [
+                { id: 1, title: "Tamilnadu Wedding Theme", category: "wedding", price: "1500 - ₹1800", image: "./assets/Tamilnadu-wedding.png", description: "A beautifully crafted Tamil Nadu–themed digital wedding invitation featuring clear event details, an embedded location map, a pre-wedding image carousel, and a live countdown timer, enriched with traditional lantern and lamp animations with elegant typography and floral accents.", demoUrl: "https://tamilnadu-wedding-invitation.vercel.app/", plans: [
                     { duration: "Invitation (web page model)", price: "1500" },
                     { duration: "Invitation (web app)", price: "1800" },
 
                 ] },
-                { id: 2, title: "Fairytale Wedding Theme", category: "wedding", price: "1300 - ₹1600", image: "./assets/Fairytale-wedding.png", description: "Beautiful fairy design with soft colors for a romantic wedding celebration.", demoUrl: "https://fairytail-wedding-invitation.vercel.app/", plans: [
+                { id: 2, title: "Fairytale Wedding Theme", category: "wedding", price: "1300 - ₹1600", image: "./assets/Fairytale-wedding.png", description: "A magical fairytale-themed digital wedding invitation designed with clear event details, embedded location maps, a live wedding countdown, and a graceful image carousel, brought to life with soft feather animations.", demoUrl: "https://fairytail-wedding-invitation.vercel.app/", plans: [
                     { duration: "Invitation (web page model)", price: 1300 },
                     { duration: "Invitation (web app)", price: 1600 },
 
                 ] },
-                { id: 3, title: "Royal Wedding Theme", category: "wedding", price: "1300 - ₹1600", image: "./assets/Royal-wedding.png", description: "Luxurious wedding invitation with earthy tones and natural elements.", demoUrl: "https://royal-wedding-invitation.vercel.app/", plans: [
+                { id: 3, title: "Royal Wedding Theme", category: "wedding", price: "1300 - ₹1600", image: "./assets/Royal-wedding.png", description: "A regal digital wedding invitation crafted in a royal theme, featuring detailed event information, embedded locations, a live wedding countdown, rich animations, smooth transitions, and an immersive audio experience.", demoUrl: "https://royal-wedding-invitation.vercel.app/", plans: [
                     { duration: "Invitation (web page model)", price: 1300 },
                     { duration: "Invitation (web app)", price: 1600 },
 
+                ] },
+                { id: 7, title: "Pixar Theme - Baby Shower", category: "baby-shower", price: "--", image: "./assets/pixar-theme-babyshower.png", description: "Adorable baby pixar themed invitation for a baby shower celebration.", demoUrl: "https://pixar-theme-babyshower.vercel.app/", plans: [
+                    { duration: "Invitation (web page model)", price: "--" },
+                    { duration: "Invitation (web app)", price: "--" },
                 ] },
                 { id: 4, title: "Kerala Wedding Theme", category: "wedding", price: "--", image: "./assets/launching-soon.png", description: "Clean and modern design with minimal elements for a contemporary wedding.", demoUrl: "https://launching-soon-five.vercel.app/", plans: [
                     { duration: "Invitation (web page model)", price: "--" },
@@ -1746,10 +1762,6 @@ You can share it with anyone through any app, and it can be viewed in any browse
 
                 ] },
                 { id: 6, title: "Elegant Birthday", category: "birthday", price: "--", image: "./assets/launching-soon.png", description: "Sophisticated design for a milestone birthday celebration.", demoUrl: "https://launching-soon-five.vercel.app/", plans: [
-                    { duration: "Invitation (web page model)", price: "--" },
-                    { duration: "Invitation (web app)", price: "--" },
-                ] },
-                { id: 7, title: "Baby Shower - Blue Theme", category: "baby-shower", price: "--", image: "./assets/launching-soon.png", description: "Adorable baby blue themed invitation for a baby shower celebration.", demoUrl: "https://launching-soon-8raz.vercel.app/", plans: [
                     { duration: "Invitation (web page model)", price: "--" },
                     { duration: "Invitation (web app)", price: "--" },
                 ] },
